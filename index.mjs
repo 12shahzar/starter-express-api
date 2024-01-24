@@ -4,7 +4,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 
 const app = express()
-const port = process.env.PORT || 'https://nutty-blue-visor.cyclic.app/';
+const port = process.env.PORT || 5001;
 const mongodbURI = process.env.mongodbURI || "mongodb+srv://userdb:dbpassword@cluster0.89mwy3g.mongodb.net/";
 
 app.use(cors());
@@ -22,7 +22,9 @@ const userSchema = new mongoose.Schema({
 const userModel  = mongoose.model('users', userSchema);
 
 
-
+app.get('/', async (req, res) => {
+    res.json('Hello World');
+});
 
 // Endpoint to handle POST requests for creating a new user
 app.post('/api/users', async (req, res) => {
