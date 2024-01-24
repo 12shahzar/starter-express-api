@@ -4,7 +4,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 
 const app = express()
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 'https://nutty-blue-visor.cyclic.app/';
 const mongodbURI = process.env.mongodbURI || "mongodb+srv://userdb:dbpassword@cluster0.89mwy3g.mongodb.net/";
 
 app.use(cors());
